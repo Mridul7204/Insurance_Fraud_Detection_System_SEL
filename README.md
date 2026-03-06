@@ -40,7 +40,7 @@ The SVM model achieves:
 ## 📁 Project Structure
 
 ```
-your-project-folder/
+Insurance_Fraud_Detection_SEL-main/
 │
 ├── app.py                              # Main Flask web server with API endpoints
 ├── train_model.py                      # Script to train and export model artifacts
