@@ -716,10 +716,20 @@
                     confidenceFill.className = 'confidence-fill safe';
                 }
 
-                // Animate confidence bar
-                const confidenceValue = Math.abs(confidence) * 100;
+                // Animate confidence bar (use probability if between 0 and 1)
+                let confidenceValue = 0;
+                if (confidence !== null && !isNaN(confidence)) {
+                    if (confidence >= 0 && confidence <= 1) {
+                        // treat as probability of fraud
+                        confidenceValue = confidence * 100;
+                    } else {
+                        // decision function value, convert to percentage scale
+                        confidenceValue = Math.abs(confidence) * 10; // arbitrary scaling
+                    }
+                }
                 setTimeout(() => {
-                    confidenceFill.style.width = `${Math.min(confidenceValue, 100)}%`;
+                    const barWidth = Math.min(confidenceValue, 100);
+                    confidenceFill.style.width = `${barWidth}%`;
                     confidencePercent.textContent = `${confidenceValue.toFixed(1)}%`;
                 }, 500);
 

@@ -155,9 +155,15 @@ def predict_claim(data: Dict[str, Any]) -> tuple[str, Optional[float]]:
     scaled_data = scaler.transform(input_df.values)
     prediction = model.predict(scaled_data)
 
-    # Get confidence score if available
+    # Get confidence score/probability if available
     confidence = None
-    if hasattr(model, 'decision_function'):
+    # prefer probability for clearer interpretation
+    if hasattr(model, 'predict_proba'):
+        # probability of class 1 (fraud)
+        prob = model.predict_proba(scaled_data)[0][1]
+        confidence = float(prob)
+    elif hasattr(model, 'decision_function'):
+        # fall back to decision function (not scaled)
         confidence = float(model.decision_function(scaled_data)[0])
 
     if prediction[0] == 1:
