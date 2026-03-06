@@ -1,7 +1,7 @@
 # Insurance Fraud Detection System
 
-[![CI/CD Pipeline](https://github.com/yourusername/insurance-fraud-detection/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/yourusername/insurance-fraud-detection/actions/workflows/ci-cd.yml)
-[![codecov](https://codecov.io/gh/yourusername/insurance-fraud-detection/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/insurance-fraud-detection)
+[![CI/CD Pipeline](https://github.com/Mridul7204/Insurance_Fraud_Detection_System_SEL/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Mridul7204/Insurance_Fraud_Detection_System_SEL/actions/workflows/ci-cd.yml)
+[![codecov](https://codecov.io/gh/Mridul7204/Insurance_Fraud_Detection_System_SEL/branch/main/graph/badge.svg)](https://codecov.io/gh/Mridul7204/Insurance_Fraud_Detection_System_SEL)
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://docker.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -44,6 +44,7 @@ your-project-folder/
 │
 ├── app.py                              # Main Flask web server with API endpoints
 ├── train_model.py                      # Script to train and export model artifacts
+├── Insurance_Fraud_Detection.ipynb     # Jupyter notebook used for exploration and initial training
 ├── requirements.txt                    # Python library dependencies (pinned versions)
 ├── insurance_claims.csv                # Original dataset (optional, ignored in git)
 ├── .env                                # Environment configuration
@@ -68,8 +69,8 @@ your-project-folder/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/insurance-fraud-detection.git
-cd insurance-fraud-detection
+git clone https://github.com/Mridul7204/Insurance_Fraud_Detection_System_SEL.git
+cd Insurance_Fraud_Detection_SEL-main
 ```
 
 **2. Create a Virtual Environment (Recommended)**
@@ -197,7 +198,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For the application to run correctly, ensure your files are organized like this:
 
 ```text
-your-project-folder/
+Insurance_Fraud_Detection_SEL-main/
 │
 ├── app.py                              # The main Flask web server
 ├── train_model.py                      # script to train and export model artifacts
@@ -272,7 +273,6 @@ pip install pytest
 pytest -q
 ```
 
-The prediction test is skipped automatically if the model artifacts are missing; run `python train_model.py` first to enable it.
 
 
 ## 📝 Usage
