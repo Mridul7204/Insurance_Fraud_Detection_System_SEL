@@ -161,7 +161,14 @@ curl -X POST http://localhost:5000/api/predict \
 }
 ```
 
-## 🔧 Configuration
+## � Usage
+
+1. Launch the web application in your browser.
+2. Fill out the form with the specific details of the insurance incident (e.g., Months as Customer, Incident Severity, etc.).
+3. Click the **"Initialize AI Analysis"** button.
+4. The system will process the inputs and return an immediate, color-coded assessment of the claim.
+
+## �🔧 Configuration
 
 Create a `.env` file for environment-specific settings:
 
@@ -193,71 +200,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Note:** The `insurance_claims.csv` file is included for demonstration. For production use, ensure sensitive data is properly secured and complies with data protection regulations.
 
-## 📁 Project Structure
-
-For the application to run correctly, ensure your files are organized like this:
-
-```text
-Insurance_Fraud_Detection_SEL-main/
-│
-├── app.py                              # The main Flask web server
-├── train_model.py                      # script to train and export model artifacts
-├── requirements.txt                    # Python library dependencies
-├── insurance_claims.csv                # The original dataset (optional)
-├── svm_model.pkl                       # trained model (generated)
-├── scaler.pkl                          # feature scaler (generated)
-├── model_columns.pkl                   # column names used by the model
-├── Insurance_Fraud_Detection.ipynb     # Notebook used for exploration and initial training
-├── .gitignore                          # files to ignore when committing
-│
-└── templates/                          # MUST be named exactly 'templates'
-    └── index.html                      # The frontend UI
-
-```
-
-## ⚙️ Installation & Setup
-
-**1. Create a Virtual Environment (Recommended)**
-It's best practice to run Python projects in a virtual environment to keep dependencies clean. Open your terminal/command prompt and run:
-
-```bash
-python -m venv venv
-
-```
-
-Activate the environment:
-
-* **Windows:** `venv\Scripts\activate`
-* **Mac/Linux:** `source venv/bin/activate`
-
-**2. Install Dependencies**
-Install the required Python packages using the `requirements.txt` file:
-
-```bash
-pip install -r requirements.txt
-
-```
-
-**2.5. Train or download the model artifacts**
-The repository does not ship with the serialized model by default. You can either download the three pickle files (`svm_model.pkl`, `scaler.pkl`, and `model_columns.pkl`) from a project release or create them yourself by executing:
-
-```bash
-python train_model.py
-```
-
-Running the script reads the dataset, preprocesses the fields, trains a support vector machine, and writes the artifacts that `app.py` expects.
-
-**3. Run the Application**
-Start the Flask development server:
-
-```bash
-python app.py
-
-```
-
-**4. Access the Web App**
-Open your web browser and navigate to the local address provided by Flask, usually:
-`http://127.0.0.1:5000`
 
 ---
 
