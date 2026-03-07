@@ -46,7 +46,7 @@ Insurance_Fraud_Detection_SEL-main/
 ├── train_model.py                      # Script to train and export model artifacts
 ├── Insurance_Fraud_Detection.ipynb     # Jupyter notebook used for exploration and initial training
 ├── requirements.txt                    # Python library dependencies (pinned versions)
-├── insurance_claims.csv                # Original dataset (optional, ignored in git)
+├── insurance_claims.csv                # Original dataset (included for training)
 ├── .env                                # Environment configuration
 ├── Dockerfile                          # Docker container configuration
 ├── docker-compose.yml                  # Docker Compose for easy deployment
