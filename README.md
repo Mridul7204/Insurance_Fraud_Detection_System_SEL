@@ -8,7 +8,7 @@
 
 A machine learning-powered web application designed to help insurance companies detect potentially fraudulent claims in real-time. Built with modern Python practices, containerized deployment, and comprehensive testing.
 
-## 🚀 Features
+# Features
 
 * **Real-time AI Analysis:** Instantly predicts whether a claim is "Genuine" or "Fraud" using a trained SVM machine learning model.
 * **Modern Web Interface:** A sleek, responsive, and professional UI designed for seamless data entry and clear result visualization.
@@ -17,7 +17,7 @@ A machine learning-powered web application designed to help insurance companies 
 * **Production Ready:** Containerized with Docker, CI/CD pipeline, comprehensive testing, and logging.
 * **Model Evaluation:** Detailed performance metrics including ROC-AUC, F1-score, and cross-validation results.
 
-## 🛠️ Tech Stack
+# Tech Stack
 
 * **Backend Framework:** Python, Flask with CORS support
 * **Machine Learning:** Scikit-Learn (SVM with balanced class weights)
@@ -30,14 +30,14 @@ A machine learning-powered web application designed to help insurance companies 
 * **Frontend:** HTML, CSS (Vanilla, responsive design)
 * **Development:** Jupyter Notebook for exploration
 
-### Model Performance
+# Model Performance
 
 The SVM model achieves:
 - **ROC-AUC:** 0.85+
 - **F1-Score:** 0.80+
 - **Cross-validation F1:** Consistent performance across folds
 
-## 📁 Project Structure
+# Project Structure
 
 ```
 Insurance_Fraud_Detection_SEL-main/
@@ -63,9 +63,9 @@ Insurance_Fraud_Detection_SEL-main/
     └── test_predict.py                 # Comprehensive test suite
 ```
 
-## ⚙️ Installation & Setup
+# Installation & Setup
 
-### Local Development
+# Local Development
 
 **1. Clone the repository**
 ```bash
@@ -104,7 +104,7 @@ FLASK_DEBUG=true python app.py
 **6. Access the Web App**
 Open your browser to `http://127.0.0.1:5000`
 
-### Docker Deployment
+# Docker Deployment
 
 **Build and run with Docker Compose:**
 ```bash
@@ -117,7 +117,7 @@ docker build -t insurance-fraud-detection .
 docker run -p 5000:5000 insurance-fraud-detection
 ```
 
-## 🧪 Testing
+# Testing
 
 Run the comprehensive test suite:
 ```bash
@@ -131,14 +131,14 @@ pytest --cov=app --cov-report=html
 pytest tests/test_predict.py -v
 ```
 
-## 📡 API Usage
+# API Usage
 
-### Health Check
+# Health Check
 ```bash
 curl http://localhost:5000/api/health
 ```
 
-### Make Prediction
+# Make Prediction
 ```bash
 curl -X POST http://localhost:5000/api/predict \
   -H "Content-Type: application/json" \
@@ -161,14 +161,14 @@ curl -X POST http://localhost:5000/api/predict \
 }
 ```
 
-## � Usage
+# Usage
 
 1. Launch the web application in your browser.
 2. Fill out the form with the specific details of the insurance incident (e.g., Months as Customer, Incident Severity, etc.).
 3. Click the **"Initialize AI Analysis"** button.
 4. The system will process the inputs and return an immediate, color-coded assessment of the claim.
 
-## �🔧 Configuration
+# Configuration
 
 Create a `.env` file for environment-specific settings:
 
@@ -179,7 +179,7 @@ MODEL_PATH=.
 LOG_LEVEL=INFO
 ```
 
-## 🤝 Contributing
+# Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -187,11 +187,11 @@ LOG_LEVEL=INFO
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+# Acknowledgments
 
 * Dataset source: [Original Insurance Claims Dataset](https://www.kaggle.com/datasets/buntyshah/insurance-fraud-claims-detection)
 * Built with modern Python best practices and MLOps principles
@@ -203,11 +203,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Notes
+#Notes
 * The `insurance_claims.csv` file is included for demonstration purposes. If working with larger or sensitive datasets, remove it from version control or store it separately (it's ignored in `.gitignore`).
 * When pushing to GitHub, do not commit the `venv` directory or large binary files. The `.gitignore` included in this repo handles the common cases.
 
-## 🧪 Running the tests
+#Running the tests
 A small suite of pytest tests is provided in the `tests/` directory. To execute them:
 
 ```bash
