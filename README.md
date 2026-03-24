@@ -223,3 +223,10 @@ pytest -q
 2. Fill out the form with the specific details of the insurance incident (e.g., Months as Customer, Incident Severity, etc.).
 3. Click the **"Initialize AI Analysis"** button.
 4. The system will process the inputs and return an immediate, color-coded assessment of the claim.
+
+# 🤝 Contributors
+
+- Aman Singh (Team Lead)
+- Mridul Rathi (Contributor)
+- Rishita Sahu (Contributor)
+- Arshad Khan (Contributor)
